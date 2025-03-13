@@ -10,6 +10,6 @@ engine = create_engine(DATABASE_URL, echo=True)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 def init_db():
-    from backend.models import Base
+    from models import Base
     Base.metadata.create_all(bind=engine)
 #this function creates the tables in the database
